@@ -464,6 +464,7 @@ void* call_host_voltage_config( void *io_pArgs )
                 {
                     // save it to variable and compare against other nomFreq
                     // All of the buckets should report the same Nominal frequency
+#if 0
                     if( l_nominalFreq != l_voltageData.nomFreq )
                     {
                         TRACFCOMP( ISTEPS_TRACE::g_trac_isteps_trace,
@@ -501,6 +502,7 @@ void* call_host_voltage_config( void *io_pArgs )
 
                         continue;
                     }
+#endif
 
                     // All of the buckets should report the same Sort Power
                     if( (l_powerModeNom != l_voltageData.SortPowerNorm) ||
